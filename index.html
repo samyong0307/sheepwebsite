@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background: url('images/header-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 0.5em 0 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 1em 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 4em 1em;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 0.75em 1.5em;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2em auto;
+            max-width: 1200px;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1em;
+            padding: 2em;
+            text-align: center;
+            width: 300px;
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: 100px;
+            margin-bottom: 1em;
+        }
+
+        .feature h3 {
+            margin-bottom: 0.5em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>歡迎來到我的電商網站</h1>
+        <p>提供您最新、最好的商品選擇</p>
+    </header>
+
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="products.html">商品</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="about.html">關於我們</a>
+    </nav>
+
+    <div class="hero">
+        <h2>精選商品正在熱賣中！</h2>
+        <p>千萬別錯過我們的限時優惠</p>
+        <a href="products.html" class="btn">立刻查看商品</a>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="images/feature1.jpg" alt="特色 1">
+            <h3>高品質商品</h3>
+            <p>我們提供您市場上最高品質的商品。</p>
+        </div>
+
+        <div class="feature">
+            <img src="images/feature2.jpg" alt="特色 2">
+            <h3>快速配送</h3>
+            <p>您的訂單將以最快的速度送達。</p>
+        </div>
+
+        <div class="feature">
+            <img src="images/feature3.jpg" alt="特色 3">
+            <h3>優質服務</h3>
+            <p>我們的客服團隊隨時為您解決問題。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>版權所有 &copy; 2025 我的電商網站</p>
+    </footer>
+</body>
+</html>

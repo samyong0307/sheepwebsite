@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我們</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="products.html">商品頁</a>
+    </nav>
+    <div class="container">
+        <h1>聯絡我們</h1>
+        <form>
+            <div style="margin-bottom: 1rem;">
+                <label for="name">姓名：</label><br>
+                <input type="text" id="name" name="name" style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="email">電子郵件：</label><br>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="message">訊息：</label><br>
+                <textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px;"></textarea>
+            </div>
+            <button type="submit" style="background-color: #333; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">送出</button>
+        </form>
+    </div>
+</body>
+</html>
