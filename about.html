@@ -1,23 +1,159 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #5a6664;
+        }
+        header {
+            background-color: #7fbaaf;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5e6967;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h1, h2 {
+            color: #00000;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 2em;
+        }
+        .team-member {
+            text-align: center;
+            margin: 1em;
+            flex: 1 1 200px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+    </style>
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html">首頁</a>
-        <a href="about.html">關於我們</a>
-        <a href="contact.html">聯絡我們</a>
-        <a href="products.html">商品頁</a>
-    </nav>
-    <div class="container">
+    <header>
         <h1>關於我們</h1>
-        <p>我們是一家致力於提供優質產品和服務的公司，成立於2020年。</p>
-        <p>我們的使命是為客戶提供最好的購物體驗和最優質的服務。</p>
-        <p>我們的團隊由經驗豐富的專業人員組成，隨時準備為您服務。</p>
+    </header>
+
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="products.html">商品</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="about.html">關於我們</a>
+    </nav>
+
+    <div class="container">
+        <h2>我們的使命</h2>
+        <p>我們的使命：引領卓越，共創美好未來<br> 
+<p><strong><font color="black"size="5">核心價值：</font></strong><br> <br>
+
+客戶至上： 將客戶的需求放在首位，持續聆聽並回應客戶的聲音，提供量身定制的解決方案。<br> 
+品質保證： 堅持不懈地追求產品和服務的卓越品質，以滿足甚至超越客戶的期望。<br> 
+創新驅動： 鼓勵創新思維，不斷探索新的技術和商業模式，引領市場發展。<br> 
+團隊合作： 建立一個充滿活力、互相信任的團隊，共同實現公司的目標。<br> 
+社會責任： 積極履行企業社會責任，為社會做出貢獻。<br> 
+使命詳述：<br> <br>
+
+<strong><font color="black"size="5">產品與服務</font></strong><br> 
+
+高品質： 我們秉持嚴格的品質標準，從產品設計、生產到售後服務，每個環節都力求精益求精。<br> 
+多元化： 不斷拓展產品線，滿足不同客戶群體的多樣化需求。<br> 
+客製化： 根據客戶的特定需求，提供個性化的產品和服務。<br> 
+創新性： 透過持續的研發投入，開發具有市場競爭力的創新產品。<br> <br>
+<strong><font color="black"size="5">客戶關係</font></strong><br> 
+
+深度溝通： 與客戶建立長期、穩定的合作關係，深入了解客戶的痛點和需求。<br> 
+快速響應： 提供高效、便捷的售後服務，解決客戶的問題。<br> 
+忠誠度提升： 透過優質的產品和服務，提升客戶的忠誠度和滿意度。<br> <br>
+<strong><font color="black"size="5">市場拓展</font></strong><br> 
+
+全球視野： 積極拓展海外市場，將我們的產品和服務推向全球。<br> 
+市場洞察： 緊跟市場趨勢，敏銳捕捉商機。<br> 
+競爭優勢： 透過差異化競爭，在激烈的市場中脫穎而出。<br> <br>
+<strong><font color="black"size="5">員工發展</font></strong><br> 
+
+人才培育： 投資於員工的培訓和發展，培養一支高素質的團隊。<br> 
+激勵機制： 建立完善的激勵機制，激發員工的潛能。<br> 
+多元包容： 營造一個多元包容的工作環境，尊重每一位員工。<br> <br>
+<strong><font color="black"size="5">社會責任</font></strong><br>
+
+環境保護： 採用環保的生產工藝，減少對環境的影響。<br> 
+社會公益： 積極參與社會公益活動，回饋社會。<br> 
+誠信經營： 堅持誠信經營，樹立良好的企業形象。<br> <br>
+<strong><font color="black"size="5">未來展望：</font></strong><br> 
+
+我們將繼續秉承「客戶至上、品質保證、創新驅動、團隊合作、社會責任」的核心價值，不斷提升自身的核心競爭力，為客戶創造更大的價值。同時，我們也將積極擁抱變革，適應市場的快速發展，成為行業的領導者。<br> <br>
+
+<strong><font color="black"size="5">具體的行動可以包括：</font></strong><br> 
+
+技術升級： 導入先進的技術和設備，提升生產效率和產品品質。<br> 
+品牌建設： 加強品牌宣傳，提升品牌知名度和影響力。<br> 
+人才招募： 吸引優秀人才加入，壯大公司團隊。<br> 
+戰略合作： 與上下游企業建立緊密的合作關係，共同打造產業生態。<br> <br>
+<strong><font color="black"size="5">總結</font></strong><br> 
+
+我們的使命不僅僅是提供高品質的產品，更是要通過不斷的創新和發展，為客戶、員工和社會創造一個更加美好的未來。我們將以飽滿的熱情和堅定的信心，迎接未來的挑戰，實現我們的使命。</p>
+
+        <h2>我們的團隊</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="images/team1.jpg" alt="團隊成員 1">
+                <h3>吳小胖</h3>
+                <p>高鐵通勤家</p>
+            </div>
+            <div class="team-member">
+                <img src="images/team2.jpg" alt="團隊成員 2">
+                <h3>洪大少</h3>
+                <p>施厝大樓擁有人/麥寮土豪</p>
+            </div>
+            <div class="team-member">
+                <img src="images/team3.jpg" alt="團隊成員 3">
+                <h3>邱恩桑</h3>
+                <p>種田的</p>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p>版權所有 &copy; 2025 我的電商網站</p>
+    </footer>
 </body>
 </html>

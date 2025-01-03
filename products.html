@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品目錄/products</title>
+    <title>商品頁</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -82,6 +82,33 @@
             margin-bottom: 1em;
         }
 
+        .cart {
+            background: white;
+            padding: 1em;
+            margin: 2em auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+
+        .cart-item button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cart-item button:hover {
+            background-color: #c53038;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -107,30 +134,81 @@
         <h2>熱銷商品</h2>
         <div class="product">
             <div class="product-item">
-                <img src="images/01.jpg" alt="商品圖片 1">
-                <p class="product-title">ipad 10</p>
+                <img src="images/01.jpg" alt="ipad 10th gen">
+                <p class="product-title">ipad 10th gen</p>
                 <p class="product-price">$16000</p>
-                <button>加入購物車</button>
+                <button onclick="addToCart('ipad 10th gen', 16000)">加入購物車</button>
             </div>
 
             <div class="product-item">
-                <img src="images/02.jpg" alt="商品圖片 2">
-                <p class="product-title">apple vision pro</p>
-                <p class="product-price">$100000</p>
-                <button>加入購物車</button>
+                <img src="images/02.jpg" alt="Apple vision pro">
+                <p class="product-title">Apple vision pro</p>
+                <p class="product-price">$120000</p>
+                <button onclick="addToCart('Apple vision pro', 120000)">加入購物車</button>
             </div>
 
             <div class="product-item">
-                <img src="images/03.jpg" alt="商品圖片 3">
-                <p class="product-title">apple watch series 10</p>
+                <img src="images/03.jpg" alt="Apple watch serier 10">
+                <p class="product-title">Apple watch serier 10</p>
                 <p class="product-price">$13000</p>
-                <button>加入購物車</button>
+                <button onclick="addToCart('Apple watch serier 10', 13000)">加入購物車</button>
             </div>
         </div>
+    </div>
+
+    <div class="cart container">
+        <h2>購物車</h2>
+        <div id="cart-items"></div>
+        <p><strong>總金額：$<span id="total-price">0</span></strong></p>
+        <button onclick="checkout()">結帳</button>
     </div>
 
     <footer>
         <p>版權所有 &copy; 2025 我的電商網站</p>
     </footer>
+
+    <script>
+        const cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItemsContainer.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name} - $${item.price}</span>
+                        <button onclick="removeFromCart(${index})">移除</button>
+                    </div>
+                `;
+            });
+
+            totalPriceElement.textContent = total;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('購物車是空的！');
+                return;
+            }
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            alert(`感謝購買！您的總金額是 $${total}`);
+            cart.length = 0; // 清空購物車
+            renderCart();
+        }
+    </script>
 </body>
 </html>
